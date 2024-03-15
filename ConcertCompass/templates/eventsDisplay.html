@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorted Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .event {
+            margin-bottom: 20px;
+        }
+        .artist-name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sorted Events</h1>
+    {% for artist, event_info in sorted_events %}
+    <div class="event">
+        <h2 class="artist-name">{{ artist }}</h2>
+        <p><strong>Start Date:</strong> {{ event_info.start_date }}</p>
+        <p><strong>Venue Name:</strong> {{ event_info.venue_name }}</p>
+        <p><strong>Venue Address:</strong> {{ event_info.venue_address }}</p>
+        <p><strong>Venue City:</strong> {{ event_info.venue_city }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>

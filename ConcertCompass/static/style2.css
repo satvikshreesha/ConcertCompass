@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Poppins Semi Bold';
+    src: url('fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins Semi Bold', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    /*background: #2e364a; !*dark blue *!*/
+    background: #121212;
+    color: #fff;
+}
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.app-title{
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #fff;
+    width: auto;
+    font-size: 40px;
+    font-family: 'Poppins Bold';
+}
+
+.container{
+    position: relative;
+    display: flex;
+    margin-bottom: 30px;
+}
+.event-date {
+    margin-left: 5px;
+    color: #fff;
+    width: 80px;
+    font-size: 15px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 88px;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    /*background-color: #fff;*/
+    background-color: #1db954;
+    z-index:0;
+}
+
+.timeline-marker {
+    width: 35px;
+    height: 30px;
+    border-radius: 50%;
+    /*background-color: #fff;*/
+    background-color: #1db954;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+}
+.event{
+    /*background: rgba(0, 0, 0, 0.3); dark dark blue for container*/
+    background: #212121; /*grey for container*/
+    padding: 20px 30px;
+    border-radius: 6px;
+    font-size: 15px;
+    position: relative;
+    width: calc(100% - 40px);
+    left: 0;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+    color: #fff;
+}
+
+.event h2 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.event h2 a:hover {
+    text-decoration: underline;
+}
+
+@keyframes movedown {
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.text-box h2{
+    font-weight: 600;
+}
+.text-box small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+@media screen and (max-width:600px) {
+    .timeline {
+        margin: 50px auto;
+    }
+    .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    /*.timeline-marker {*/
+    /*    margin-right: 0;*/
+    /*}*/
+    .event {
+        width: 100%;
+    }
+}

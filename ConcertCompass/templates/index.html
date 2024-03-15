@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/indexstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome">Welcome to</div>
+        <div class="app-title">Concert Compass</div>
+        <form id="locationForm" action="/login" method="post">
+            <div class="loc-input">
+                <input type="text" name="location" id="locationInput" placeholder="Enter location (ex: Seattle, WA)" required>
+            </div>
+<!--            <div class="login-link"><a href="/login">Login with Spotify</a></div>-->
+            <div class="login-link"><button type="button" id="loginButton">Login with Spotify</button></div>
+        </form>
+    </div>
+
+    <script>
+        // Get the form and input element
+        const locationForm = document.getElementById('locationForm');
+        const locationInput = document.getElementById('locationInput');
+
+        // Get the login button
+        const loginButton = document.getElementById('loginButton');
+
+        // Add click event listener to login button
+        loginButton.addEventListener('click', function() {
+            // Submit the form when the button is clicked
+            locationForm.submit();
+        });
+    </script>
+
+
+</body>
+</html>

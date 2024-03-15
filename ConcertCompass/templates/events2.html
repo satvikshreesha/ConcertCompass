@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Timeline</title>
+    <link rel="stylesheet" href="../static/style2.css">
+</head>
+<body>
+    <div class="app-title">Concert Compass</div>
+    <div class="timeline">
+        <!-- this part can be duplicated -->
+        <div class="timeline-line"></div>
+        {% for artist, event_details in events %}
+        <div class="container">
+            <div class="event-date">{{ event_details['start_date'] }}</div>
+            <div class="timeline-marker"></div>
+            <div class="event">
+<!--                <h2>{{ artist }}</h2>-->
+                <h2><a href="{{ event_details['link'] }}" target="_blank">{{ artist }}</a></h2>
+<!--                <small> {{ event_details['start_date'] }}</small>-->
+                <ul>
+                    <li><strong> {{ event_details['venue_name'] }} </strong></li>
+                    <li><strong> {{ event_details['venue_address'] }} , {{ event_details['venue_city'] }} </strong> </li>
+<!--                    <li><strong>Venue City:</strong> </li>-->
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- end-->
+    </div>
+</body>
+</html>

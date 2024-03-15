@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Poppins Semi Bold';
+    src: url('fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-style: normal;
+}
+body {
+    background-color: black;
+    color: white;
+    height: 100vh; /* Ensures the body takes up the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 30px; /* Increase the distance between the title and the button */
+
+}
+.welcome {
+    font-size: 25px;
+    margin-bottom: -15px;
+    font-family: 'Poppins Semi Bold', sans-serif;
+}
+
+.app-title {
+    font-size: 70px;
+    margin-bottom: 30px; /* Increase the distance between the title and the button */
+    font-family: 'Poppins Bold', sans-serif;
+}
+
+.loc-input {
+    margin-bottom: 20px; /* Adjust spacing between the title and the user input box */
+    font-family: 'Poppins Semi Bold', sans-serif;
+    font-size: 18px;
+}
+
+.loc-input input {
+    padding: 10px;
+    font-family: 'Poppins Semi Bold', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 280px; /* Adjust width of the input box as needed */
+}
+
+
+.login-link button {
+    display: inline-block;
+    padding: 10px 35px;
+    font-family: 'Poppins Semi Bold', sans-serif;
+    font-size: 18px;
+    border-radius: 35px;
+    text-decoration: none;
+    color: black;
+    background-color: #1db954;
+    border: none;
+    cursor: pointer;
+}
+
+.login-link button:hover {
+    background-color: darkgreen;
+}
